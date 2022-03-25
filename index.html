@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankImitation</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Maven+Pro&family=Montserrat:wght@300&family=Press+Start+2P&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form class="login__form">
+      <p class="current__user_label">Please, enter your data</p>
+      <img src="pko.jpg" width="150px" />
+      <div id="forms">
+        <input
+          type="text"
+          maxlength="8"
+          required
+          placeholder="username"
+          class="username__login__input login__input"
+        />
+        <input
+          type="number"
+          maxlength="4"
+          required
+          placeholder="PIN"
+          class="pin__login__input login__input"
+        />
+        <button type="submit" class="login__button">&#8594;</button>
+      </div>
+    </form>
+
+    <main class="app">
+      <section class="upper__section">
+        <div class="log__out">LOG OUT</div>
+        <p class="curent__balance"></p>
+        <p class="current__date"></p>
+        <p id="session-start">
+          Session ends at: <span class="time__end__session">05:00</span>
+        </p>
+      </section>
+      <section class="main__section">
+        <div class="transfer atribute__dobule_columns">
+          <p class="make__transfer__label">Make a transfer</p>
+          <input
+            class="transfer__to login__input"
+            type="text"
+            placeholder="to who?"
+          />
+          <input
+            class="transfer__amount login__input"
+            type="number"
+            placeholder="amount"
+          />
+          <button type="button" class="operation__button transfer__button">
+            Transfer
+          </button>
+          <p class="transfer__message tr_mes"></p>
+        </div>
+        <div class="loan atribute__dobule_columns">
+          <p class="make__loan__label title-label">Loan</p>
+          <input
+            class="loan__input login__input"
+            type="number"
+            placeholder="how much?"
+          />
+          <button type="button" class="operation__button loan__button">
+            Loan
+          </button>
+          <p class="transfer__message loan_message"></p>
+        </div>
+        <div class="deposit atribute__dobule_columns">
+          <p class="make__deposit__label title-label">Deposit</p>
+          <input
+            class="deposit__input login__input"
+            type="number"
+            placeholder="how much?"
+          />
+          <button type="button" class="operation__button deposit__button">
+            deposit
+          </button>
+          <p class="transfer__message deposit_message"></p>
+        </div>
+
+        <div class="movements"></div>
+        <button type="button" class="sort__button asc">Sort (A)</button>
+        <button type="button" class="sort__button desc">Sort (D)</button>
+
+        <div class="deposit__amount_label"></div>
+        <div class="withdrawal__amount_label"></div>
+        <div class="interests__amount_label"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
