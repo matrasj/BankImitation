@@ -227,6 +227,7 @@ input::-webkit-inner-spin-button {
 
   align-items: center;
   font-family: inherit;
+  justify-content: space-between;
   padding: 2rem 4rem;
   border-radius: 1rem;
   margin-bottom: 2px;
@@ -244,6 +245,10 @@ input::-webkit-inner-spin-button {
 .movement__number {
   font-weight: bold;
   font-size: 2.2rem;
+}
+
+.movement__date {
+  text-align: end;
 }
 
 .withdrawal__type {
@@ -296,6 +301,8 @@ input::-webkit-inner-spin-button {
 }
 
 .withdrawal__amount_label {
+  justify-self: flex-start;
+  max-width: max-content;
   font-size: 2.4rem;
   color: #fff;
   background-color: #d6336c;
@@ -304,11 +311,14 @@ input::-webkit-inner-spin-button {
 }
 
 .deposit__amount_label {
+  display: inline;
+  justify-self: flex-end;
   font-size: 2.4rem;
   color: #fff;
   background-color: #12b886;
   padding: 0.8rem 1.6rem;
   border-radius: 2rem;
+  max-width: max-content;
 }
 
 .withdrawal__amount_label {
@@ -379,10 +389,28 @@ input::-webkit-inner-spin-button {
 }
 
 .interests__amount_label {
+  max-width: max-content;
   font-size: 2.4rem;
   color: #fff;
   background-color: #12b886;
   padding: 0.8rem 1.6rem;
   border-radius: 2rem;
   transform: translate(0, -60%);
+  justify-self: center;
+  grid-column: 1 / 3;
+}
+
+.create__new__account {
+  position: absolute;
+  right: 22%;
+  transform: translate(0, 250%);
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #555;
+}
+
+.create__new__account:hover {
+  color: #222;
 }
